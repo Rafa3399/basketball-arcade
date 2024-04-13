@@ -1,9 +1,10 @@
-# Project's name
+# Basketball Arcade
 
-[Click here to see deployed game](https://github.com/Rafa3399/basketball-arcade)
+[Click here to play the game!](https://github.com/Rafa3399/basketball-arcade)
 
 ## Description
-Brief description of the project
+This is Basketball Arcade, a game that replicate the enjoyment you can get playing this arcade game in real life. The game ends when the countdown reach 0. When it's over, you get a score based on the points you got and you can save it to compare with other players.
+
 
 
 ## MVP
