@@ -4,5 +4,35 @@ body, html {
   margin: 0;
   font-family: 'Arial', sans-serif;
   background-color: #ff9d9d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.main-screen{
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+}
+
+#start-button{
+  margin: 20px 0px;
+  padding: 30px 60px;
+}
+
+.setting-buttons{
+  display: flex;
+}
+
+#options-button{
+  margin-right: 15px;
+  padding: 10px 30px;
+}
+
+#records-button{
+  padding: 10px 30px;
+}

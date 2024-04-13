@@ -1,10 +1,11 @@
 # Basketball Arcade
 
+![Island Racer Logo](images/basketball-arcade.png)
+
 [Click here to play the game!](https://github.com/Rafa3399/basketball-arcade)
 
 ## Description
 This is Basketball Arcade, a game that replicate the enjoyment you can get playing this arcade game in real life. The game ends when the countdown reach 0. When it's over, you get a score based on the points you got and you can save it to compare with other players.
-
 
 
 ## MVP
