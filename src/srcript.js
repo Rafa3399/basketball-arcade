@@ -1,12 +1,12 @@
 // change the main screen
-
+const startScreen = document.getElementById("start-screen");
 
 window.onload = function () {
-  document.addEventListener("click", function () {
-    showMenu();
+  startScreen.addEventListener("click" , function () {
+    showMainSreen();
 })}
 
-function showMenu() {
+function showMainSreen() {
   console.log("Open the main screen");
   new Game().start();
 }
