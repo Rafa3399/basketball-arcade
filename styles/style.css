@@ -3,20 +3,26 @@ body, html {
   height: 100%;
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #ff9d9d;
+  background-color: #1d0136;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.main-screen{
-  width: 500px;
+#start-screen{
+  width: 800px;
   height: 600px;
-  display: flex;
+}
+
+#main-screen{
+  width: 800px;
+  height: 600px;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: blueviolet;
+
 }
 
 #start-button{
