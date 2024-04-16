@@ -27,28 +27,19 @@ function barMove() {
   let myBar = document.getElementById("bar");
   let width = 1;
   let fullBar = 0;
-  if (fullBar === 0){
-    const intervalUp = setInterval(function () {
-      if (width === 100) {
-        fullBar = 1;
-        clearInterval(intervalUp);
-      } 
-      else if (fullBar === 0) {
-        width++;
-        myBar.style.width = width + '%';
-        console.log(width);
-      }}, 15);
-  }
-  else {
-    const intervalDown = setInterval(function () {
-      if (width === 0) {
-        fullBar = 0;
-        clearInterval(intervalDown);
-      } 
-      else if (fullBar === 1) {
+  const intervalUp = setInterval(function () {
+    if (width === 100 && fullBar === 0) {
+      fullBar = 1;
+    } 
+    else if (width === 0 && fullBar === 1) {
+      fullBar = 0;
+    } 
+    else if (fullBar === 0) {
+      width++;
+      myBar.style.width = width + '%';
+    }
+    else if (fullBar === 1) {
       width--;
       myBar.style.width = width + '%';
-      console.log(width);
-    }}, 15);
-  }
+  }}, 15);
 }
