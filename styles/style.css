@@ -93,15 +93,36 @@ body, html {
   height: 600px;
   background-color: #222034;
   display: none;
+  justify-content: center;
+  align-items: flex-end;
 }
  
 #shootingBar {
-  width: 100%;
-  background-color: grey;
+  width: 50%;
+  border: 1px solid #ffffff;
+  position: relative;
+  margin-bottom: 50px;
 }
-
+#range-colors{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+#red-area{
+  width: 50px;
+  height: 30px;
+  background-color: red;
+}
+#green-area{
+  width: 50px;
+  height: 30px;
+  background-color: green;
+}
 #bar {
   width: 1%;
   height: 30px;
-  background-color: green;
+  border-right: 5px solid #ffffff;
+  position: absolute;
 }

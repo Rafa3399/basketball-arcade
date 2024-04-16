@@ -24,6 +24,6 @@ class Game {
     // Occult the main screen
     this.mainScreen.style.display = "none";
     // Show the game screen
-    this.gameScreen.style.display = "block";
+    this.gameScreen.style.display = "flex";
   }
 }
