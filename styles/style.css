@@ -111,12 +111,12 @@ body, html {
   position: absolute;
 }
 #red-area{
-  width: 50px;
+  width: 10%;
   height: 30px;
   background-color: red;
 }
 #green-area{
-  width: 50px;
+  width: 10%;
   height: 30px;
   background-color: green;
 }
@@ -125,4 +125,8 @@ body, html {
   height: 30px;
   border-right: 5px solid #ffffff;
   position: absolute;
+}
+
+#time{
+  color: white;
 }

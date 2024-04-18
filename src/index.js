@@ -4,10 +4,9 @@ class Game {
     this.mainScreen = document.getElementById("main-screen");
     this.gameScreen = document.getElementById("game-screen");
     this.height = 800;
-    this.width = 600;
-    this.obstacles = [];
+    this.width = 600;;
     this.score = 0;
-    this.countdown = 30000; // 30 seconds
+    this.countdown = 30; // 30 seconds
     this.gameIsOver = false;
     this.gameIntervalId;
   }
