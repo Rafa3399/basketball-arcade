@@ -126,7 +126,14 @@ body, html {
   border-right: 5px solid #ffffff;
   position: absolute;
 }
-
 #time{
   color: white;
+}
+#end-screen{
+  width: 800px;
+  height: 600px;
+  background-color: #222034;
+  display: none;
+  justify-content: center;
+  align-items: center;
 }

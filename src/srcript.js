@@ -2,18 +2,24 @@
 const startScreen = document.getElementById("start-screen");
 const startButton = document.getElementById("start-button");
 const gameScreen = document.getElementById("game-screen");
+const restartButton = document.getElementById("restart-button");
+const menuButton = document.getElementById("menu-button");
 let myBar = document.getElementById("bar");
-let remainingTime = document.getElementById("time").innerText
 
-// change to the main screen
+// change screens
 window.onload = function () {
   startScreen.addEventListener("click" , function () {
     showMainScreen();
   })
   startButton.addEventListener("click" , function () {
     startGame();
-  }
-)}
+  })
+  restartButton.addEventListener("click" , function () {
+    startGame();
+  })
+  menuButton.addEventListener("click" , function () {
+    showMainScreen();
+  })}
 
 function showMainScreen() {
   console.log("Open the main screen");
@@ -26,7 +32,10 @@ function startGame(){
   gameLoop()
 }
 
+// Game loop
 function gameLoop() {
+  let points = 0;
+  let remainingTime = document.getElementById("time").innerText;
   // Countdown
   const timer = setInterval(() => {
     remainingTime--
@@ -34,7 +43,8 @@ function gameLoop() {
     console.log(remainingTime)
     if (remainingTime === 0) {
       clearInterval(timer)
-      return;
+      new Game().endGame();
+      console.log('End!')
     }
   }, 1000);
   // Bar movement
@@ -44,16 +54,17 @@ function gameLoop() {
     width = myBar.style.width
     console.log(width)
       if (width > "44%" && width < "56%"){
-        console.log('Perfect shoot!');
+        points++
+        console.log('Perfect shoot! Points:', points);
       }
       else if (width < "45%" && width > "34%"){
-        console.log('Good shoot!');
+        console.log('Good shoot! Points:', points);
       }
       else if (width < "64%" && width > "55%"){
-        console.log('Good shoot!');
+        console.log('Good shoot! Points:', points);
       }
       else{
-        console.log('Missed shoot!');
+        console.log('Missed shoot! Points:', points);
       }
      intervalBar();
   })
