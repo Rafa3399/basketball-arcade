@@ -35,6 +35,7 @@ function startGame(){
 // Game loop
 function gameLoop() {
   let points = 0;
+  let missedShots= 0;
   let remainingTime = document.getElementById("time").innerText;
   // Countdown
   const timer = setInterval(() => {
@@ -42,6 +43,9 @@ function gameLoop() {
     document.getElementById("time").textContent = remainingTime;
     console.log(remainingTime)
     if (remainingTime === 0) {
+      document.getElementById("score").innerText +=  points;
+      document.getElementById("successful-shots").innerText +=  points;
+      document.getElementById("missed-shots").innerText +=  missedShots;
       clearInterval(timer)
       new Game().endGame();
       console.log('End!')
@@ -53,17 +57,38 @@ function gameLoop() {
   gameScreen.addEventListener("click" , function () {
     width = myBar.style.width
     console.log(width)
+      // 100% chance
       if (width > "44%" && width < "56%"){
         points++
         console.log('Perfect shoot! Points:', points);
       }
+      // 50% chance
       else if (width < "45%" && width > "34%"){
-        console.log('Good shoot! Points:', points);
+        let a = Math.floor(Math.random()*10);
+        if (a < 5){
+          points++
+          console.log('Good shoot! Points:', points);
+        }
+        else{
+          missedShots++
+          console.log('Missed shoot! Points:', points);
+        }
       }
+      // 50% chance
       else if (width < "64%" && width > "55%"){
-        console.log('Good shoot! Points:', points);
+        let a = Math.floor(Math.random()*10);
+        if (a < 5){
+          points++
+          console.log('Good shoot! Points:', points);
+        }
+        else{
+          missedShots++
+          console.log('Missed shoot! Points:', points);
+        }
       }
+      // 0% chance
       else{
+        missedShots++
         console.log('Missed shoot! Points:', points);
       }
      intervalBar();
