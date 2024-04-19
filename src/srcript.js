@@ -34,7 +34,7 @@ function startGame(){
 
 // Game loop
 function gameLoop() {
-  let points = 0;
+  let points = document.getElementById("score-arcade").innerText;
   let missedShots= 0;
   let remainingTime = document.getElementById("time").innerText;
   // Countdown
@@ -91,6 +91,7 @@ function gameLoop() {
         missedShots++
         console.log('Missed shoot! Points:', points);
       }
+      document.getElementById("score-arcade").innerText =  points;
      intervalBar();
   })
 }

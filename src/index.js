@@ -8,7 +8,7 @@ class Game {
     this.height = 800;
     this.width = 600;;
     this.score = 0;
-    this.countdown = 10;
+    this.countdown = 30;
     this.gameIsOver = false;
     this.gameIntervalId;
   }
@@ -30,6 +30,7 @@ class Game {
     // Hide the end screen
     this.endScreen.style.display = "none";
 
+    document.getElementById("score-arcade").innerText = this.score;
     document.getElementById("time").innerText = this.countdown;
   }
 
