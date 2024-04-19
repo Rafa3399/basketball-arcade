@@ -60,6 +60,7 @@ function gameLoop() {
       // 100% chance
       if (width > "44%" && width < "56%"){
         points++
+        scoreAnimation();
         console.log('Perfect shoot! Points:', points);
       }
       // 50% chance
@@ -67,6 +68,7 @@ function gameLoop() {
         let a = Math.floor(Math.random()*10);
         if (a < 5){
           points++
+          scoreAnimation();
           console.log('Good shoot! Points:', points);
         }
         else{
@@ -79,6 +81,7 @@ function gameLoop() {
         let a = Math.floor(Math.random()*10);
         if (a < 5){
           points++
+          scoreAnimation();
           console.log('Good shoot! Points:', points);
         }
         else{
@@ -91,8 +94,8 @@ function gameLoop() {
         missedShots++
         console.log('Missed shoot! Points:', points);
       }
+      intervalBar()
       document.getElementById("score-arcade").innerText =  points;
-     intervalBar();
   })
 }
 
@@ -119,3 +122,10 @@ function intervalBar (){
     })
   }, 15);
 } 
+
+function scoreAnimation(){
+  document.getElementById("arcade").src = "/images/score.gif";
+  setTimeout(() => {
+    document.getElementById("arcade").src = "/images/1.gif";
+  }, "300");
+}

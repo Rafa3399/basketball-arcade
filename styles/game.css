@@ -1,0 +1,66 @@
+#game-screen{
+  width: 800px;
+  height: 600px;
+  background-color: #222034;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#arcade{
+  width: 800px;
+  height: 600px;
+  position: absolute;
+}
+#shootingBar {
+  width: 50%;
+  border: 1px solid #ffffff;
+  position: relative;
+  margin-bottom: 50px;
+  align-items:flex-end;
+}
+#range-colors{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+#red-area{
+  width: 10%;
+  height: 30px;
+  background-color: red;
+}
+#green-area{
+  width: 10%;
+  height: 30px;
+  background-color: green;
+}
+#bar {
+  width: 1%;
+  height: 30px;
+  border-right: 5px solid #ffffff;
+  position: absolute;
+}
+#scoreboard{
+  margin-top: 332px;
+  width: 155px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#score-arcade{
+  color: #de458c;
+  position: relative;
+  font-family: 'Digital';
+  font-weight: bold;
+  font-size: 30px;
+}
+#time{
+  /* margin-left: 110px; */
+  color: #de458c;
+  position: relative;
+  font-family: 'Digital';
+  font-weight: bold;
+  font-size: 30px;
+}
