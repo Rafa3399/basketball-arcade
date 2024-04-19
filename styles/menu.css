@@ -2,11 +2,11 @@
   width: 800px;
   height: 600px;
   display: none;
-  flex-direction: column;
+
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   background-color: #222034;
-  background-image: url("/images/background.gif");
+  background-image: url("/images/start-screen.gif");
   background-position: center;
   background-size:100%;
 
@@ -25,7 +25,7 @@
   border: 2px solid #b18597;
   box-shadow: 0px 0px 5px 1px #b18597;
 }
-
+/*
 .setting-buttons{
   display: flex;
 }
@@ -54,13 +54,13 @@
   border: 2px solid #b18597;
   box-shadow: 0px 0px 5px 1px #b18597;
 }
-
-#options-button:hover, #records-button:hover, #start-button:hover{
+*/
+/*#options-button:hover, #records-button:hover,*/ #start-button:hover{
   background-color: #df7126;
   color: rgb(231, 231, 231);
 }
 
-#start-button:active, #options-button:active, #records-button:active {
+/*#options-button:active, #records-button:active,*/ #start-button:active {
   background-color: #3f3f74;
   box-shadow: 0px 0px 5px 1px #b18597;
   transform: translateY(4px);

@@ -9,6 +9,7 @@ let myBar = document.getElementById("bar");
 // change screens
 window.onload = function () {
   startScreen.addEventListener("click" , function () {
+    new Audio('/sounds/Retro Game Coin Sound Effect.mp3').play()
     showMainScreen();
   })
   startButton.addEventListener("click" , function () {
@@ -43,6 +44,7 @@ function gameLoop() {
     document.getElementById("time").textContent = remainingTime;
     console.log(remainingTime)
     if (remainingTime === 0) {
+      new Audio('/sounds/Official NBA Horn SFX.mp3').play()
       document.getElementById("score").innerText +=  points;
       document.getElementById("successful-shots").innerText +=  points;
       document.getElementById("missed-shots").innerText +=  missedShots;
@@ -94,6 +96,7 @@ function gameLoop() {
         missedShots++
         console.log('Missed shoot! Points:', points);
       }
+      //ballMovement()
       intervalBar()
       document.getElementById("score-arcade").innerText =  points;
   })
@@ -121,7 +124,7 @@ function intervalBar (){
       clearInterval(interval);
     })
   }, 15);
-} 
+}
 
 function scoreAnimation(){
   document.getElementById("arcade").src = "/images/score.gif";
@@ -129,3 +132,15 @@ function scoreAnimation(){
     document.getElementById("arcade").src = "/images/1.gif";
   }, "300");
 }
+
+/*
+function ballMovement() {
+      let elem = document.getElementById('ball');
+      elem.style.top = '500px';
+          timer = setInterval(function() {
+              pos++;
+              elem.style.top = pos+"px";
+              if( pos == 0) clearInterval(timer);
+          },1000);
+  }
+  */
