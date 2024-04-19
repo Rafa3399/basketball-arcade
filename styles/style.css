@@ -11,11 +11,11 @@ body, html {
 
 @font-face {
   font-family: 'Arcade';
-  src: src('/fonts/ARCADE_N.TTF');
+  src: url('/fonts/ARCADE_N.TTF');
 }
 @font-face {
   font-family: 'Digital';
-  src: src('/fonts/DS-DIGI.TTF');
+  src: url('/fonts/DS-DIGI.TTF');
 }
 
 #start-screen{
