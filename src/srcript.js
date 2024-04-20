@@ -127,7 +127,7 @@ function intervalBar (){
 }
 
 function scoreAnimation(){
-  document.getElementById("arcade").src = "/images/score.gif";
+  document.getElementById("arcade").src = "/images/score-animation.gif";
   setTimeout(() => {
     document.getElementById("arcade").src = "/images/1.gif";
   }, "300");
