@@ -9,7 +9,7 @@ let myBar = document.getElementById("bar");
 // change screens
 window.onload = function () {
   startScreen.addEventListener("click" , function () {
-    new Audio('/sounds/Retro Game Coin Sound Effect.mp3').play()
+    new Audio('../sounds/Retro Game Coin Sound Effect.mp3').play()
     showMainScreen();
   })
   startButton.addEventListener("click" , function () {
@@ -44,7 +44,7 @@ function gameLoop() {
     document.getElementById("time").textContent = remainingTime;
     console.log(remainingTime)
     if (remainingTime === 0) {
-      new Audio('/sounds/Official NBA Horn SFX.mp3').play()
+      new Audio('../sounds/Official NBA Horn SFX.mp3').play()
       document.getElementById("score").innerText +=  points;
       document.getElementById("successful-shots").innerText +=  points;
       document.getElementById("missed-shots").innerText +=  missedShots;
