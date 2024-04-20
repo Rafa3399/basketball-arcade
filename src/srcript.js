@@ -62,10 +62,7 @@ function gameLoop() {
       // 100% chance
       if (width > "44%" && width < "56%"){
         points++
-        document.getElementById("arcade").src = "/images/score-animation.gif";
-        setTimeout(() => {
-          document.getElementById("arcade").src = "/images/1.gif";
-        }, "300");
+        scoreAnimation();
         console.log('Perfect shoot! Points:', points);
       }
       // 50% chance
@@ -73,10 +70,7 @@ function gameLoop() {
         let a = Math.floor(Math.random()*10);
         if (a < 5){
           points++
-          document.getElementById("arcade").src = "/images/score-animation.gif";
-          setTimeout(() => {
-            document.getElementById("arcade").src = "/images/1.gif";
-          }, "300");
+          scoreAnimation();
           console.log('Good shoot! Points:', points);
         }
         else{
@@ -89,10 +83,7 @@ function gameLoop() {
         let a = Math.floor(Math.random()*10);
         if (a < 5){
           points++
-          document.getElementById("arcade").src = "/images/score-animation.gif";
-          setTimeout(() => {
-            document.getElementById("arcade").src = "/images/1.gif";
-          }, "300");
+          scoreAnimation();
           console.log('Good shoot! Points:', points);
         }
         else{
@@ -136,9 +127,9 @@ function intervalBar (){
 }
 
 function scoreAnimation(){
-  document.getElementById("arcade").src = "/images/score-animation.gif";
+  document.getElementById("arcade").src = "../images/score-animation.gif";
   setTimeout(() => {
-    document.getElementById("arcade").src = "/images/1.gif";
+    document.getElementById("arcade").src = "../images/1.gif";
   }, "300");
 }
 
