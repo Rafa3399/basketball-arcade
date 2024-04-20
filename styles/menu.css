@@ -2,13 +2,10 @@
   width: 800px;
   height: 600px;
   display: none;
-
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   background-color: #222034;
-  background-image: url("/images/start-screen.gif");
-  background-position: center;
-  background-size:100%;
 
 }
 
